@@ -1,0 +1,1694 @@
+/*-------------------------------------------------------------------------------------
+Theme:combust(dark+light);
+Version:1.0;
+Description:Personal landing page, HTML5,CSS3 TEMPLATE;
+___________________________________________________________________________________________________________________
+CONTENT TABLE:
+             1.11 HEADER-------------------------------(line no 166)
+                1.12 FIXED NAVIGATION------------------(line no 257)
+                1.13 IMG DIV AT LEFT AFTER NAV---------(line no 318)
+             1.2 MAIN----------------------------------(line no 344)
+                1.21 About-----------------------------(line no 350)
+                1.22 FACT------------------------------(line no 412)
+                1.23 Resume----------------------------(line no 448)
+                1.24 SERVICE---------------------------(line no 546)
+                    1.241 SERVICE SLIDE----------------(line no 559)
+                    1.242 SERVICE_image----------------(line no 590)
+                    1.243 SERVICE_slide body-----------(line no 597)
+                1.25 skill-----------------------------(line no 649)
+                1.26 WORK------------------------------(line no 696)
+                1.27 CLIENT carousel-------------------(line no 821)
+             1.3 FOOTER--------------------------------(line no 960)
+             1.4 RESPONSIVE----------------------------(line no 1064)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   MAIN custom styles
+   ========================================================================== */
+.crcl{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border:8px ;
+  border-right:5px solid #001925;
+  border-top:5px solid #001925;
+  border-left:5px solid grey;
+  border-bottom:5px solid grey;
+  top: 48%;
+  position: absolute;
+  left: 48%;
+  animation: cd 1s linear 0.1s infinite;
+  -webkit-animation: cd 1s linear 0.1s infinite;
+  -moz-animation: cd 1s linear 0.1s infinite;
+  -ms-animation: cd 1s linear 0.1s infinite;
+  -o-animation: cd 1s linear 0.1s infinite;
+}
+@keyframes cd
+  {0%{transform: rotate(90deg);-webkit-transform:translate(90deg); }
+  25%{transform: rotate(180deg);-webkit-transform:translate(180deg);}
+  50%{transform: rotate(270deg);-webkit-transform:translate(270deg);}
+  100%{transform: rotate(460deg);-webkit-transform:translate(460deg);}
+}
+.loader{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 9999999;
+  background-color: #CCCCBE;
+
+}
+.common{
+    background-color: #CCCCBE!important;
+}
+*{
+    margin:0px auto;
+    text-align:justify;
+
+}
+/**1.1 HEADER**/
+
+header{
+   
+    height: 100vh;
+    
+    z-index: -2;
+    background:url(../img/e.jpg)no-repeat top center fixed!important;
+    background-size: cover!important;
+}  
+header::after{
+    content: " ";
+    display: block;
+    height:100vh;
+    width: 100%;
+    opacity: .4;
+    background-color: white;
+    
+    position: absolute;
+
+}
+
+.jumbotron_1st{
+    
+   
+    text-align: justify;
+    background-color: transparent!important;
+    z-index: 2;
+    padding-left: 0px!important;
+    border-left: 0px;
+    position: absolute;
+    top: 50vh;
+    left: 10vh;
+
+}
+.jumbotron_1st h1{
+   
+    color: #001925!important;
+    font-family: "Libre Franklin";
+
+    
+}
+.jumbotron_1st h3{
+    
+    color: #001925;
+    font-family: "Libre Franklin";
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.jumbotron_1st h1::before{
+    content: " ";
+    position: absolute;
+    height:110px;
+    width: 3px;
+    margin-left: -20px!important;
+    background-color: #001925;
+}
+.bb{
+  color: #001925!important;
+}
+.down:focus{
+  outline:0px!important;
+}
+.down{
+  background-color: transparent;
+  
+  font-size: 1.5em!important;
+  width: 40px!important;
+  height: 40px!important;
+  border-radius: 50%!important;
+  border:1px solid #001925!important;
+  animation: dd 1s linear 0.1s infinite;
+  -webkit-animation: dd .8s linear 0.1s infinite;
+  -moz-animation: dd .8s linear 0.1s infinite;
+  -ms-animation: dd .8s linear 0.1s infinite;
+  -o-animation: dd .8s linear 0.1s infinite;
+}
+@keyframes dd
+{0%{transform: translate(0px,0px);-webkit-transform: translate(0px,0px);-o-transform: translate(0px,0px);-moz-transform: translate(0px,0px);-ms-transform: translate(0px,0px);}
+
+25%{transform: translate(0px,10px);-webkit-transform: translate(0px,10px);-moz-transform: translate(0px,10px);-ms-transform: translate(0px,10px);-o-transform: translate(0px,10px);}
+100%{transform: translate(0px,-5px);-webkit-transform: translate(0px,-5px);-moz-transform: translate(0px,-5px);-ms-transform: translate(0px,-5px);-o-transform: translate(0px,-5px);}
+}
+
+
+
+
+
+/*1.12 FIXED NAVIGATION
+------------------------------*/
+
+.nav2{
+    padding-left: 0px;
+    margin-left: 0px;
+
+}
+.nav2 nav{
+   
+    
+    position: absolute;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-bottom: 0px!important;
+}
+
+.nav2 nav li{
+    padding-left: 1.3vw;
+    background-color: transparent!important;
+    height: 43px;
+    margin-top: .7vh;
+    margin-left: 0px;
+
+
+}
+.nav3{
+    background-color: #001925!important;
+    height: 8vh!important;
+}
+.nav3 ul{
+    margin-left: .5vw;
+    
+}
+.nav2 nav li a{
+    color:white!important;
+    font-size: 1.2em;
+    font-family: "Libre Franklin";
+    font-weight: bolder;
+}
+.nav2 nav li:nth-child(1){
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.nav2 nav li:nth-child(6){
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.stick{
+    position: fixed!important;
+    top: 0px;
+    right:0px;
+    z-index: 9999;
+}
+.stick1{
+    position: fixed!important;
+    top: 0px;
+    left: 0px;
+}
+
+
+/**1.13 IMG DIV AT LEFT AFTER NAV
+---------------------------------------------*/
+.lft_img{
+    
+    height: 100vh!important;
+    padding-right: 0px;
+    margin-right: 0px;
+    background-color: grey;
+    position: fixed;
+    background-size: cover;
+
+}
+.lft_img h1{
+    font-size: 12vh!important;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-left: 5px #31464F solid;
+    border-bottom:5px #31464F solid;
+    color:#001925 ;
+    width: 10vw;
+    font-family: "Arvo";
+} 
+
+/*1.2 MAIN
+---------------------*/
+main{
+    z-index: 6;
+
+}
+/*1.21 About**/
+.about{
+    padding-top: 15vh;
+    height: auto;
+}
+.about h1{
+    font-size: 10vh;
+    font-weight: bolder;
+    font-family: "Libre Franklin";
+    color: #001925;
+    
+
+}
+
+.border{
+    height:1.2vh;
+    width: 6vw;
+    background-color: #00293C;
+    border-radius: 2px;
+    margin-top: -10px;
+    padding-top: 0px;
+    float: left;
+}
+
+.about_img{
+    
+    background-size: cover!important;
+    height: 55vh;
+    width: 100%;
+    margin-top: 12vh;
+}
+.about_p{
+    margin-top: 12vh;
+    font-family: "Libre Franklin";
+    font-size: 1em;
+    line-height: 2em;
+    color: #001925;
+}
+.about_p h2{
+    font-family: "Raleway";
+    font-weight: bolder;
+    color: #001925;
+
+}
+.about_p button{
+    background-color: #001925;
+    width: 200px;
+    height:40px; 
+    font-size: .8em;
+    font-weight: bolder;
+    font-family: "Libre Franklin";
+    color:  white;
+}
+.about_p button:hover{
+    background-color: white;
+    color: #001925;
+    -webkit-transition: .3s all ease-in-out .2s;
+    -moz-transition: .3s all ease-in-out .2s; 
+    -ms-transition: .3s all ease-in-out .2s; 
+    -o-transition: .3s all ease-in-out .2s; 
+    transition: .3s all ease-in-out .2s; 
+}
+/*1.22 FACT
+---------------*/
+.fact{
+    padding-top: 150px!important;
+
+}
+.fact1{
+    background-color: #001925;
+    width: 200px;
+    border-right: 20px #CCCCBE solid;
+    border-bottom: 20px #001925 solid;
+    text-align: center;
+}
+.fact1 h3{
+    
+    font-weight: bolder;
+    color: white;
+    font-family: "Libre Franklin";
+}
+.fact_sp1{
+    font-weight: bolder;
+    font-size: 4.5em;
+    color: #001925;
+}
+.fact_sp2{
+    font-size: .8em;
+    font-weight: bolder;
+    color: #001925;
+}
+.mono{
+    margin-left: 20px!important;
+}
+.fact_no{
+   margin-top: -10px;
+   margin-left: -20px;
+}
+/*1.23 Resume
+----------------------*/
+.resume{
+    padding-top: 15vh!important;
+}
+.resume h1{
+    font-size: 10vh;
+    font-weight: bolder;
+    font-family: "Libre Franklin";
+    color: #001925;
+}
+.head1{
+   color: #001925!important;
+   font-size: 24px!important;
+   box-sizing: content-box!important;
+   line-height: 72px!important;
+   text-align: center!important;
+   width: 72px!important;
+   height: 72px!important;
+   display: inline-block!important;
+   overflow: hidden!important;
+   border-radius: 50%!important;
+   background-color: #CCCCBE!important;
+}
+.list{
+    padding-top: 10vh;
+}
+.list a{
+
+}
+.list a:hover{
+    text-decoration: none;
+}
+.list .list_li:hover{
+    transform: translate(20px,0px);
+    -webkit-transform: translate(20px,0px);
+    -webkit-transition: .2s all ease-in-out .3s;
+    -moz-transition: .2s all ease-in-out .3s; 
+    -ms-transition: .2s all ease-in-out .3s; 
+    -o-transition: .2s all ease-in-out .3s; 
+    transition: .2s all ease-in-out .3s; 
+}
+
+.list_li{
+    list-style: none;
+    padding-left: 1vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    -webkit-transition: .2s all ease-in-out .3s;
+    -moz-transition: .2s all ease-in-out .3s; 
+    -ms-transition: .2s all ease-in-out .3s; 
+    -o-transition: .2s all ease-in-out .3s; 
+    transition: .2s all ease-in-out .3s;
+    border-bottom: 1px dotted grey;
+
+}
+.list_sp1{
+    font-weight: bolder;
+    color: #001925!important;
+    font-size: 1.7em;
+    font-family: "Raleway";
+
+}
+.list_sp2{
+    font-family: "Raleway";
+    font-size:1.4em;
+    padding-left: 1vw;
+    color: #001925!important; 
+}
+.list_p ul{
+    padding-top: 30px;
+    padding-left: 0px;
+}
+.list_p li{
+    display: inline!important;
+}
+.list_p li:nth-child(2){
+    padding-left: 20px;
+}
+.list_p li:nth-child(3){
+    padding-left: 20px;
+}
+.list_p li:before{
+    content:"• ";
+}
+.list_p p{
+    padding-top: 20px;
+    line-height: 2em;
+    font-family: "Libre Franklin";
+    color: #001925;
+}
+.list_p h4{
+    font-weight: bolder;
+    color: #001925;
+}
+.list_icon{
+    margin-bottom: -5vh;
+}
+/*1.24 SERVICE
+----------------*/
+.service{
+    padding-top: 15vh!important;
+
+
+}
+.service h1{
+    font-size: 10vh;
+    font-weight: bolder;
+    font-family: "Libre Franklin";
+    color: #001925;
+}
+/*1.241 SERVICE SLIDE
+----------------------------*/
+.service_slide{
+    padding-top: 10vh;
+}
+.arrow
+{
+    border-radius: 0px !important;
+    background-color: #001925!important;
+    border:0px!important;
+
+}
+.arrow span
+{
+    color:white;
+
+}
+#arrow1
+{
+    margin-left: 2px;
+}
+.arrow:hover
+{
+    background-color: white !important;
+}
+.arrow:hover span
+{
+    color: #001925 !important;
+}
+
+
+/*1.242 SERVICE_image**/
+.service_img{
+    height: 28vh!important;
+    width:100%!important;
+}
+
+
+/*1.243 SERVICE_slide body**/
+.mina{
+    padding-top: 10vh;
+    text-align: center;
+
+}
+.mina h4{
+    font-weight: bolder;
+    font-family: "Libre Franklin";
+    color: #001925;
+}
+.mina p{
+    font-family: "Libre Franklin";
+    font-size: .8em;
+    line-height: 2em;
+    border-bottom: 1px grey dotted;
+    padding-bottom: 5vh;
+    text-align: justify!important;
+    color: #001925;
+
+}
+.arrow_key{
+    float: right!important;
+}
+
+.slide_item li{
+    padding-top: 1.5vh;
+    list-style: none;
+    font-size: .8em;
+    text-align: center;
+    margin-left: -4vh;
+}
+.slide_item{
+    padding-bottom: 5vh;
+}
+.slide_item ul{
+    padding-left: 0vw!important;
+    text-align: center;
+}
+.slide_btn{
+    background-color: #001925!important;
+    font-size: 1.2em;
+    color: white!important;
+    font-style: "Raleway";
+    border:0px!important;
+    border-radius: 3px;
+    margin-top: 2vh;
+    width: 150px;
+    margin-left: 8vh!important;
+
+}
+
+/*1.25 skill
+-------------------*/
+.skill{
+    margin-top: 15vh!important;
+}
+.skill_item{
+    margin-top: 18vh!important;
+}
+.skill_item h3{
+    color: #00293C;
+    padding-bottom:2vh;
+    text-align: center;
+
+}
+.skill h1{
+    font-size: 10vh;
+    font-weight: bolder;
+    font-family: "Libre Franklin";
+    color: #001925;
+}
+.skill_circle{
+    padding-top: 1vh;
+}
+.skill_circle span{
+    color: #001925!important;
+}
+.slice{
+    border-color: #8F8F8F!important;
+}
+.fill{
+    border-color: #8F8F8F!important;
+}
+.bar{
+    border-color: #EEEEEE!important;
+}
+.skill_prg{
+    padding-top: 1vh;
+}
+.skill_sp{
+    font-family: "Raleway";
+}
+.skill_bar{
+    background-color: #00293C!important;
+}
+.skill_bar1{
+    height: 1vh!important;
+}
+/*1.26 WORK
+----------------------*/
+.work{
+  margin-top:15vh!important; 
+}
+.work h1{
+  font-size: 10vh;
+  font-weight: bolder;
+  font-family: "Libre Franklin";
+  color: #001925;
+}
+.carousel-inner{
+  margin-top: 4vh;
+}
+
+
+
+.nuv{
+  margin-top: 15vh!important;
+}
+.nuv li:hover .cvr{
+  display: block;
+}
+
+.nuv img{
+  height: 30vh!important;
+  width: 100%;
+  border-radius: 10px;
+  vertical-align: top;
+ 
+}
+.nuv_img:after {
+    content: '\A';
+    position: absolute;
+    width: 95%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.nuv_img:before{
+  content:  attr(data-content);
+  color: white;
+  font-family: "Raleway";
+  z-index: 1;
+  bottom: 0;
+  left: 10%;
+  font-size: 2em;
+  color: grey;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0;
+
+}
+.nuv_img:hover:after , .nuv_img:hover:before{
+    opacity: 1;
+}
+.nuv div{
+  margin-left: 10px;
+}
+.nuv ul li img::before{
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: black;
+  opacity: .5;
+  height: 100%!important;
+  width: 100%!important;
+}
+.nuv li span
+{
+  margin-left: 3em;
+  font-size: 1.1em;
+  color: white;
+}
+.work_p h2{
+  color: #001925;
+}
+.work_p a:hover{
+  text-decoration: none!important;
+}
+.work_img{
+  height: 45vh!important;
+  width: 20vw!important;
+  border-radius: 5px;
+}
+.work_item{
+  margin-top: 10vh!important;
+}
+
+@media (min-width: 992px){
+.work_item.item.container.active {
+  width:100%;
+}
+}
+@media (min-width: 768px){
+.work_item.item.container.active {
+  width:100%;
+}
+}
+@media (min-width: 1200px){
+.work_item.item.container.active {
+  width:100%;
+}
+}
+.active .work_p {
+  margin-left: auto;
+  text-align: justify;
+  font-family: "Raleway";
+}
+.work button{
+  font-family: "Raleway";
+  margin-top: 5vh;
+  margin-left: 1vw!important;
+  border-radius: 0px!important;
+  background-color: #001925!important;
+  color: white!important;
+}
+
+/*1.27 CLIENT carousel
+-------------------------------*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+
+.crsl{
+    margin-top: 15vh!important;
+    background-color: white!important;
+    padding: 0px!important;
+}
+#carouselHacked{
+    background-color: #CCCCBE!important;
+    padding: 0px!important;
+}
+
+.client1{
+    padding-top: 25vh!important;
+    padding-bottom: 10vh!important;
+}
+.client h1{
+    font-size: 10vh;
+    font-weight: bolder;
+    font-family: "Libre Franklin";
+    color: #001925;
+}
+.client_img{
+    height: 30vh!important;
+    width: 90%!important;
+    margin-left: 0px!important;
+}
+.client h3{
+    font-weight: bolder;
+    font-family: "Libre Franklin";
+    color: #001925;
+}
+.client p{
+    font-family: "Libre Franklin";
+    
+
+}
+.client a{
+    background-color: #00293C!important;
+    color: white;
+    z-index: 999;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none!important;
+}
+.client a span{
+    font-size: 1.6em;
+
+}
+.client a:hover{
+    background-color: grey!important;
+    text-decoration: none!important;
+    color:#00293C;
+}
+.control{
+    position: absolute;
+    top: 25vh;
+    padding: 0px;
+
+
+}
+.rght{
+    right: 0px;
+
+}
+.client_item a{
+    font-family: "Libre Franklin";
+    font-weight: bolder;
+    font-size: 1em;
+    background-color: transparent!important;
+    color: white!important;
+    text-decoration: none;
+    
+
+}
+.client_item{
+    margin-left: 0px!important;
+    padding-top: 10vh!important;
+}
+.client_item a:hover{
+    background-color: transparent!important;
+    color: black!important;
+    text-decoration: none;
+
+}
+.tasty p{
+    color: #001925;
+}
+
+
+/*1.3 FOOTER
+--------------------------*/
+.footer_wrapper{
+    height: 100vh;
+    background-color: transparent!important;
+    z-index: -66;
+}
+
+footer{
+    position: fixed!important;
+    bottom: 0px;
+    margin-top: 25vh;
+    height: 100vh;
+    background-color:white;
+    padding-top: 10vh;
+    z-index:-55;
+}
+
+footer h3{
+    font-weight: bolder;
+    color: #00293C;
+}
+
+.border2{
+    height:.4vh;
+    width: 7vw;
+    background-color: yellow;
+    border-radius: 2px;
+    margin-top: -10px;
+    padding-top: 0px;
+}
+.footer_cntct li{
+    list-style: none;
+    line-height: 5vh;
+
+}
+.footer_cntct2{
+    padding-top: 6vh;
+}
+
+.footer_ico{
+    padding-top: 6vh;
+}
+.head2{
+   color: white!important;
+   font-size: 15px!important;
+   box-sizing: content-box!important;
+   line-height: 30px!important;
+   text-align: center!important; 
+   width: 30px!important; 
+   height: 30px!important;
+   display: inline-block!important;
+   overflow: hidden!important;
+   border-radius: 50%!important;
+   background-color: #00293C!important;
+}
+.head3{
+   color: #00293C; font-size: 17px!important;
+   box-sizing: content-box!important;
+   line-height: 32px!important;
+   text-align: center!important;
+   width: 32px!important;
+   height: 32px!important;
+   display: inline-block!important;
+   overflow: hidden!important;
+   border-radius: 50%!important;
+   background-color:transparent!important;
+   margin-bottom: -1.2vh!important;
+   margin-right: 1vw!important;
+}
+.footer_ico i:hover{
+    color: white!important;
+}
+.cntct_sp1{
+    font-size: .8em;
+    font-family: "Libre Franklin";
+    color: #888888!important;
+
+}
+.footer_demo{
+    list-style-type: square;
+}
+.footer_demo2{
+    padding-top: 6vh;
+}
+.footer_lst{
+    background-color: #001925;
+    top: 45%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+
+    
+}
+.lst{
+    padding-top: 5vh;
+    
+}
+.lst p{
+    color: white;
+    margin-left: 4vw;
+}
+
+
+/**RESPOONSIVE
+-----------------------------------------------------*/
+
+
+
+@media only screen and (min-width:769px ) and (max-width: 991px){
+    .fact_no{
+    width: 25%!important;
+
+}
+.about_img_div{
+    left: 28%!important;
+
+}
+.about_img{
+    height: 70vh!important;
+}
+.slide_btn{
+    background-color: #001925!important;
+    font-size: 1.2em;
+    color: white!important;
+    font-style: "Raleway";
+    border:0px!important;
+    border-radius: 3px;
+    margin-top: 2vh;
+    width: 150px;
+    margin-left: 8vh!important;
+
+}
+.nav11 a {
+  display: block;
+  color: #001925;
+  font-size: 6vh;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.work_img{
+  height: 45vh!important;
+  width: 100%!important;
+  border-radius: 5px;
+  margin-top: 5vh;
+}
+}
+@media only screen and (min-height:200px ) and (max-height: 410px)
+{
+  .down{
+    top: 15vh;
+    left: 75vw;
+  }
+}
+@media only screen and (min-width:200px ) and (max-width: 540px){
+  .down{
+    top: 35vh;
+    left: 36vw;
+  }
+}
+@media only screen and (min-width:200px ) and (max-width: 768px){
+   .jumbotron_1st h1::before{
+    content: " ";
+    position: absolute;
+    height:60px;
+    width: 3px;
+    margin-left: -20px!important;
+    background-color: black;
+}
+.nav2 nav li{
+    padding-left: 1vw;
+    background-color:#3D3D3A!important;
+    height: 30px;
+    margin-top: 0;
+
+
+}
+.nav2 nav li a{
+    color:white!important;
+    font-size: .8em;
+    font-family: "Libre Franklin";
+}
+.nav2 nav li:nth-child(1){
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.nav2 nav li:nth-child(5){
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.fact{
+    text-align: center!important;
+}
+.fact1{
+   
+    
+    left: 30%;
+}
+   .mono{
+    text-align: center!important;
+    margin-left: 0px!important
+
+
+}
+.fact_no{
+    text-align: center!important;
+    margin-left: 0px!important;
+    margin-top:5vh;
+
+
+}
+.about_img{
+    height: 90vh!important;
+}
+.service_img{
+    height: 60vh!important;
+    width:100%!important;
+}
+.slide_btn{
+    background-color: #001925!important;
+    font-size: 1.2em;
+    color: white!important;
+    font-style: "Raleway";
+    border:0px!important;
+    border-radius: 3px;
+    margin-top: 2vh;
+    width: 150px;
+    margin-left: 36vw!important;
+
+}
+.skill_prg{
+  margin-right: 15vw!important;
+  padding-top: 5vh!important;
+}
+.nuv img{
+  height: 35vh!important;
+  width: 60%;
+  border-radius: 20px!important;
+  margin-top: 10vh!important;
+}
+.nuv div{
+  margin-left: 0px;
+}
+.nuv ul li:before{
+  
+}
+
+.work_img{
+  height: 45vh!important;
+  width: 70%!important;
+  border-radius: 5px;
+  margin-left: 12vw;
+}
+.nuv_img:after {
+    content: '\A';
+    position: absolute;
+    width: 60%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    margin-left: 18vw;
+    border-radius: 20px;
+}
+.nuv_img:before{
+  content:  attr(data-content);
+  color: white;
+  font-family: "Raleway";
+  z-index: 1;
+  bottom: 0;
+  margin-left: 14vw;
+  font-size: 2em;
+  color: grey;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0;
+
+}
+}
+@media only screen and (min-width:200px ) and (max-width: 510px){
+.nuv_img:after {
+    content: '\A';
+    position: absolute;
+    width: 60%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    margin-left: 17vw!important;
+    border-radius: 20px;
+}
+.nuv_img:before{
+  content:  attr(data-content);
+  color: white;
+  font-family: "Raleway";
+  z-index: 1;
+  bottom: 0;
+  margin-left: 14vw;
+  font-size: 2em;
+  color: grey;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0;
+
+}
+}
+@media only screen and (min-width:511px ) and (max-width: 627px){
+.nuv_img:after {
+    content: '\A';
+    position: absolute;
+    width: 60%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    margin-left: 18vw!important;
+    border-radius: 20px;
+}
+.nuv_img:before{
+  content:  attr(data-content);
+  color: white;
+  font-family: "Raleway";
+  z-index: 1;
+  bottom: 0;
+  margin-left: 14vw;
+  font-size: 2em;
+  color: grey;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0;
+
+}
+}
+@media only screen and (min-width:429px ) and (max-width: 768px){
+  .skill_circle{
+    margin-left:39vw!important;
+  }
+}
+@media only screen and (min-width:350px ) and (max-width: 430px){
+.skill_circle{
+  margin-left:30vw!important; 
+  padding-top: 10vh!important;
+}
+}
+@media only screen and (min-width:200px ) and (max-width: 350px){
+.skill_circle{
+  margin-left:26vw!important; 
+  padding-top: 10vh!important;
+}
+}
+@media only screen and (min-width:500px ) and (max-width: 660px){
+    .slide_btn{
+    background-color: #001925!important;
+    font-size: 1.2em;
+    color: white!important;
+    font-style: "Raleway";
+    border:0px!important;
+    border-radius: 3px;
+    margin-top: 2vh;
+    width: 120px;
+    margin-left: 35vw!important;
+
+}
+.nav11 a {
+  display: block;
+  color: #001925;
+  font-size: 5vh;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+}
+@media only screen and (min-width:200px ) and (max-width: 499px){
+       .slide_btn{
+    background-color: #001925!important;
+    font-size: 1.2em;
+    color: white!important;
+    font-style: "Raleway";
+    border:0px!important;
+    border-radius: 3px;
+    margin-top: 2vh;
+    width: 120px;
+    margin-left: 25vw!important;
+
+}
+.nav11 a {
+  display: block;
+  color: #001925;
+  font-size: 3vh;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.footer_cntct {
+    padding-top: 8vh!important;
+
+}
+.about_img{
+    
+    background-size: cover!important;
+    height: 35vh!important;
+    width: 100%;
+    margin-top: 12vh;
+}
+.about_p button{
+  margin-left: 3vw!important;
+}
+}
+@media only screen and (min-width:200px ) and (max-width: 500px){
+    .footer_demo{
+        display: none;
+    }
+    .footer_contact{
+        width: 50%!important;
+
+    }
+    .footer_ico1{
+        width: 50%!important;
+    }
+}
+@media only screen and (min-width:200px ) and (max-width: 390px){
+    .jumbotron_1st h1{
+   
+    color:black!important;
+    font-family: "Libre Franklin";
+    font-size: 2em !important;
+
+    
+}
+
+.jumbotron_1st h3{
+    
+    color: black;
+    font-family: "Libre Franklin";
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: 1.3em;
+}
+.jumbotron_1st{
+    
+   
+    text-align: justify;
+    background-color: transparent!important;
+    z-index: 2;
+    padding-left: 0px!important;
+    border-left: 0px;
+    position: absolute;
+    top: 50vh;
+    left: 14vh;
+
+}
+}
+@media only screen and (min-height:150px ) and (max-height: 400px){
+    .jumbotron_1st h1::before{
+    content: " ";
+    position: absolute;
+    height:40px;
+    width: 3px;
+    margin-left: -20px!important;
+    background-color: black;
+}
+
+    .jumbotron_1st{
+     text-align: justify;
+    background-color: transparent!important;
+    z-index: 2;
+    padding-left: 0px!important;
+    border-left: 0px;
+    position: absolute;
+    top: 60%;
+    left: 16vh;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+}
+  .jumbotron_1st h1{
+   
+    color: black!important;
+    font-family: "Libre Franklin";
+    font-size: 2em !important;
+
+    
+}
+.jumbotron_1st h3{
+    
+    color: black;
+    font-family: "Libre Franklin";
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: 1em;
+}
+}
+@media only screen and (min-width:200px ) and (max-width: 991px){
+.lft_img{
+    display: none;
+}
+.footer_lst{
+    background-color: #001925;
+    margin-top: 20vh;
+    height: 6vh;
+    display: none;
+    padding-top: 5vh;
+
+    
+}
+
+.footer_wraper{
+    height: 150vh;
+    background-color: transparent!important;
+    z-index: -66;
+}
+
+footer{
+    position: fixed!important;
+    bottom: 0px;
+    
+    height:90vh;
+    background-color:white;
+    padding-top: 10vh;
+    z-index:-55;
+}
+
+}
+@media only screen and (min-height:150px ) and (max-height: 441px){
+    .footer_lst{
+    background-color: #001925;
+    margin-top: 20vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    display: none;
+
+    
+}
+
+.footer_cntct{
+    padding-top: 8vh;
+}
+.footer_ico1{
+    padding-top: 8vh;
+}
+.footer_demo{
+    list-style-type: square;
+    padding-top: 8vh;
+}
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
